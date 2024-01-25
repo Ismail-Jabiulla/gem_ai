@@ -22,9 +22,9 @@ class _ChatPageScreenState extends State<ChatPageScreen> {
       if (messageType == 'user') {
         _messages.add(
             ChatMessageDecoration(
-          text: 'API response goes here',
-          messageType: 'api',
-        ));
+              text: 'API response goes here',
+              messageType: 'api',
+            ));
       }
     });
     _scrollToBottom();
@@ -84,7 +84,7 @@ class _ChatPageScreenState extends State<ChatPageScreen> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: colorAppTextWhite
+                color: colorAppTextWhite
             ),
             padding: EdgeInsets.all(8.0),
             child: Row(

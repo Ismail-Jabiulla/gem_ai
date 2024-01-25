@@ -3,6 +3,7 @@ import 'package:gem_ai/constants/image_constants.dart';
 import '../authnetication/profile_screen.dart';
 import '../authnetication/signin_screen.dart';
 import '../constants/color_constant.dart';
+import 'history_page_screen.dart';
 import 'home_page_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
     HomePageScreen(),
     CategoriesTab(),
     PhotoSearch(),
+    HistoryPageScreen(),
     token != null ? ProfileScreen() : SignInScreen()
   ];
 
