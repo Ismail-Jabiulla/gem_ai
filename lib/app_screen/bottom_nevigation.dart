@@ -3,6 +3,7 @@ import 'package:gem_ai/constants/image_constants.dart';
 import '../authnetication/profile_screen.dart';
 import '../authnetication/signin_screen.dart';
 import '../constants/color_constant.dart';
+import 'history_page_screen.dart';
 import 'home_page_screen.dart';
 
 class BottomNavigationScreen extends StatefulWidget {
@@ -16,11 +17,12 @@ class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   final List<Widget> _screens = [
     HomePageScreen(),
     CategoriesTab(),
-    PhotoSearch(),
+    HistoryPageScreen(),
+    SignInScreen(),
     token != null ? ProfileScreen() : SignInScreen()
   ];
 
-  static get token => null;
+  static get token => 'null';
 
   void _onItemTapped(int index) {
     setState(() {
@@ -117,11 +119,4 @@ class CategoriesTab extends StatelessWidget {
   }
 }
 
-class PhotoSearch extends StatelessWidget {
-  const PhotoSearch({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}

@@ -22,9 +22,9 @@ class _ChatPageScreenState extends State<ChatPageScreen> {
       if (messageType == 'user') {
         _messages.add(
             ChatMessageDecoration(
-          text: 'API response goes here',
-          messageType: 'api',
-        ));
+              text: 'API response goes here',
+              messageType: 'api',
+            ));
       }
     });
     _scrollToBottom();
@@ -50,16 +50,20 @@ class _ChatPageScreenState extends State<ChatPageScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: colorAppBackground,
-      appBar: AppBar(
-        title: Text('Chating Title', style: GoogleFonts.chivoMono(fontSize: 18), maxLines: 1, overflow: TextOverflow.ellipsis,),
-        centerTitle: true,
-        backgroundColor: colorAppBackground,
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.push_pin))
-        ],
-      ),
       body: Column(
         children: [
+          SizedBox(height: 40),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(onPressed: (){
+                Navigator.pop(context);
+              }, icon: Icon(Icons.arrow_back_outlined)),
+              Text('Chatting Title', style: GoogleFonts.chivoMono(fontSize: 18), maxLines: 1, overflow: TextOverflow.ellipsis,),
+              IconButton(onPressed: (){}, icon: Icon(Icons.push_pin)),
+            ],
+          ),
           Expanded(
             child: _messages.isEmpty
                 ? Center(
@@ -84,7 +88,7 @@ class _ChatPageScreenState extends State<ChatPageScreen> {
           ),
           Container(
             decoration: BoxDecoration(
-              color: colorAppTextWhite
+                color: colorAppTextWhite
             ),
             padding: EdgeInsets.all(8.0),
             child: Row(

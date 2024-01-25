@@ -20,27 +20,27 @@ class HomePageScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 150),
+            const SizedBox(height: 150),
             Image.asset(imageAppLogo, color: colorApplogo,),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Text(TextGreeting, style: GoogleFonts.chivoMono(fontSize: 30, fontWeight: FontWeight.w600),),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(TextAppName, style: GoogleFonts.chivoMono(fontSize: 30, fontWeight: FontWeight.w600, color: colorApplogo)),
-                Text(' 👋', style: TextStyle(fontSize: 25),),
+                const Text(' 👋', style: TextStyle(fontSize: 25),),
               ],
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             Text(TextHomepagetxt, textAlign: TextAlign.center, style: GoogleFonts.chivoMono(fontSize: 16)),
-            SizedBox(height: 100),
+            const SizedBox(height: 100),
              Padding(
-              padding: EdgeInsets.only(left: 16.0, right: 16.0),
+              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
               child: GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context) => ChatPageScreen()));
                   },
-                  child: SubmitButtonWidget(height: 60, width: double.infinity, TextColor: colorAppTextWhite, ButtonText: 'Chat Start',)),
+                  child: const SubmitButtonWidget(height: 60, width: double.infinity, TextColor: colorAppTextWhite, ButtonText: 'Chat Start',)),
             ),
           ],
         ),
